@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OnewView Failure Analyzes</title>
+  <h1>OneView Failure Analyzes</h1>
+  <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link href="css/dataTables.bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id='table-container'></div>
+  <footer class='footer'>
+    <div class='container-fluid'>
+      <hr />
+      <p class='pull-right'>Failure Analyzes CSV to HTML table by Oneview Automation</p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="js/jquery.csv.min.js"></script>
+  <script src="js/jquery.dataTables.min.js"></script>
+  <script src="js/dataTables.bootstrap.js"></script>
+  <script src='js/csv_to_html_table.js'></script>
+
+  <script>
+    init_table({
+      csv_path: 'data/Health Clinics in Chicago.csv',
+      element: 'table-container',
+      allow_download: true,
+      csv_options: { separator: ',', delimiter: '"' },
+      datatables_options: { "paging": true }
+    });
+  </script>
+  <script type="text/javascript">
+  </script>
+</body>
+
+</html>
